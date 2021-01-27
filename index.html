@@ -26,16 +26,49 @@ and open the template in the editor.
                 padding-top: 70px;
                 padding-bottom: 70px;
             }
+            
+            .navbar {
+                padding-top: 15px;
+                padding-bottom: 15px;
+                border: 0;
+                border-radius: 0;
+                margin-bottom: 0;
+                font-size: 12px;
+                letter-spacing: 5px;
+            }
+            
+            .navbar-nav li a:hover {
+                color: #1abc9c !important;
+            }
+            
         </style>
     </head>
     
-    
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Me</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#">WHO</a></li>
+                    <li><a href="#">WHAT</a></li>
+                    <li><a href="#">WHERE</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     
     <body>
         
         <div class="container-fluid bg-1 text-center">
             <h3>Who Am I?</h3>
-            <img src="picture.jpg" class="img-circle" alt="pic">
+            <img src="picture.jpg" class="img-responsive img-circle" style="display: inline" alt="pic">
             <h3>I'm a sack of anxiety</h3>
         </div>
         
@@ -51,18 +84,18 @@ and open the template in the editor.
             <h3>Where To Find me?</h3>
             <div class="row">
                 <div class="col-sm-4">
-                    <p>Skolā</p>
-                    <img src="WELCOMEtOdULOC.jpg" alt="welcome">
+                    <p>At home</p>
+                    <img src="WELCOMEtOdULOC.jpg" class="img-responsive" style="width:100%" alt="welcome">
                 </div>
                 
                 <div class="col-sm-4">
-                    <p>Skolā</p>
-                    <img src="WELCOMEtOdULOC.jpg" alt="welcome">
+                    <p>At home</p>
+                    <img src="WELCOMEtOdULOC.jpg" class="img-responsive" style="width:100%" alt="welcome">
                 </div>
                 
                 <div class="col-sm-4">
-                    <p>Skolā</p>
-                    <img src="WELCOMEtOdULOC.jpg" alt="welcome">
+                    <p>At home</p>
+                    <img src="WELCOMEtOdULOC.jpg" class="img-responsive" style="width: 100%" alt="welcome">
                 </div>
                 
             </div>
