@@ -1,0 +1,123 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 28, 2021, 6:18:27 PM
+    Author     : melec
+*/
+        
+    .bg-1{
+        background-color: #474e5d;
+        color: #ffffff;
+    }
+    
+    .bg-2 {
+        background-color: #474e5d;
+        color: #ffffff;
+    }
+    
+    .bg-3 {
+        background-color: #ffffff;
+        color: #555555;
+    }
+
+    .pad {
+        padding-top: 50px;
+        padding-bottom: 20px;
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+    
+    .pad1 {
+        padding-top: 150px;
+        padding-bottom: 20px;
+        padding-left: 75px;
+        padding-right: 75px;
+    }
+    
+    .navbar {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border: 0;
+        border-radius: 0;
+        margin-bottom: 0;
+        font-size: 12px;
+        letter-spacing: 5px;
+        position: fixed;
+        overflow: hidden;
+        width: 100%;
+        z-index: 1;
+    }
+            
+    .navbar-nav li a:hover {
+        color: #1abc9c !important;
+    }
+    
+    .active {
+        background-color: #474e5d;
+    }
+    
+    .bg-4 {
+        background-color: #2f2f2f;
+        color: #ffffff
+    }
+            
+    body {
+        font: 20px "Montserrat", sans-serif;
+        line-height: 1.8;
+        color: #7FFF00;
+    }
+    
+    .margin {
+        margin-bottom: 45px;
+    }
+    
+    .center {
+        text-align: center;
+        border: 3px solid #7fff00;
+    }
+
+    .illustration {
+        width: 100%;
+    }
+    
+    .rtl {
+        direction: rtl;
+    }
+    
+    .ltr {
+        direction: ltr;
+    }
+    
+    @keyframes mymove {
+        from {background-color: red;}
+        to {background-color: blue;}
+    }
+    
+    #myDIV {
+        width: 300px;
+        height: 200px;
+        animation: mymove 5s infinite;
+    }
+
+    p {font-size: 16px;}
+    
+    .clip-text {
+        background: url(http://i.giphy.com/fsULJFFGv8X3G.gif);
+        background-size: cover;
+        background-position: center;
+  
+       -webkit-background-clip: text;
+        color: transparent;
+        
+        width: 300px;
+        height: 100px;
+        box-sizing: border-box;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 100px;
+        flex-shrink: 0;
+    }
