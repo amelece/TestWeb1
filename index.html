@@ -10,54 +10,11 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <style>
-            .bg-1{
-                background-color: #1abc9c;
-                color: #ffffff;
-            }
-            .bg-2 {
-                background-color: #474e5d;
-                color: #ffffff;
-            }
-            .bg-3 {
-                background-color: #ffffff;
-                color: #555555;
-            }
-            .container-fluid {
-                padding-top: 70px;
-                padding-bottom: 70px;
-            }
-            
-            .navbar {
-                padding-top: 15px;
-                padding-bottom: 15px;
-                border: 0;
-                border-radius: 0;
-                margin-bottom: 0;
-                font-size: 12px;
-                letter-spacing: 5px;
-            }
-            
-            .navbar-nav li a:hover {
-                color: #1abc9c !important;
-            }
-            
-            .bg-4 {
-                background-color: #2f2f2f;
-                color: #ffffff
-            }
-            
-            body {
-                font: 20px "Montserrat", sans-serif;
-                line-height: 1.8;
-                color: #f5f6f7;
-            }
-            
-            p {font-size: 16pz;}
-            
-            .margin {margin-bottom: 45px;}
-            
-        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css ">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <link  rel="stylesheet" href="css/stils.css">
+
     </head>
     
    
@@ -74,13 +31,13 @@ and open the template in the editor.
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Me</a>
+                    <a class="navbar-brand active" href="#">HTML un CSS</a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">WHO</a></li>
-                        <li><a href="#">WHAT</a></li>
-                        <li><a href="#">WHERE</a></li>
+                        <li><a href="#">< div ></a></li>
+                        <li><a href="#">< span ></a></li>
+                        <li><a href="#">tagi</a></li>
                     </ul>
                 </div>
             </div>
@@ -88,46 +45,94 @@ and open the template in the editor.
         
         <main>
         
-            <div class="container-fluid bg-1 text-center">
-                <h3>Who Am I?</h3>
-                <img src="images/welcom.png" alt="pic">
-                <h3>I'm a sack of anxiety</h3>
-            </div>
-            
-            <div class="container-fluid bg-2 text-center">
-                <h3>What Am I?</h3>
-                <p>Confusion is what I am</p>
-                <a href="#" class="btn btn-default btn-lg">
+            <div class="pad1 bg-1 center">
+                <h2>Kas ir div tags?</h2>
+                <img src="images/div.jpg" alt=div width="300">
+                <h3>
+                    div sadala HTML dokumentu.<br>
+                    To izmanto kā konteineru HTML elemntiem, ko pēc tam stilizē ar CSS vai JS.<br>
+                    Tagam var pievinot klasi vai id atribūtus, tādejādi stilizējot tā saturu.<br>
+                    div tagā var likt jebkādu saturu.<br>
+                    <b><big>Pirms un pēc div taga automātiski tiek atstāta viena brīva rindkopa.</big></b><br>
+                    Tas ir plaši pieņemts, tā ka internetpārlūkprogrammas, kā, piemēram, <i>Google Chrome, Microsoft Edge, Mozilla Firefox, Safari, Opera,</i> to atpazīst.
+                </h3>
+                <a href="https://www.w3schools.com/tags/tag_div.ASP" class="btn btn-default btn-lg" target="_blank">
                     
-                    <span class="glyphicon glyphicon-search"></span>Search
+                    <span class="glyphicon glyphicon-search"></span>Meklē labāku izskaidrojumu
                 </a>
             </div>
             
-            <div class="container-fluid bg-3 text-center">
-                <h3>Where To Find me?</h3>
+            <div class="pad bg-2 center">
+                <h2>Kas ir span tags?</h2>
+                <img src="images/span.gif" alt="span">
+                <h3>
+                    span izmanto, lai izceltu vai iekrāsotu daļu teksta vai dokumenta.<br>
+                    Tagu stilizē ar CSS vai JS, pievienojot klasi vai id atribūtu.<br>
+                    span ir līdzīgs div tagam, tomēr tas <b><big>neatdala tā saturu jaunā rindkopā.</big></b><br>
+                    Tas ir plaši pieņemts, tā ka internetpārlūkprogrammas, kā, piemēram, <i>Google Chrome, Microsoft Edge, Mozilla Firefox, Safari, Opera,</i> to atpazīst.
+                </h3>
+                <a href="https://www.w3schools.com/tags/tag_span.asp#:~:text=The%20tag%20is%20an,span%3E%20is%20an%20inline%20element." class="btn btn-default btn-lg" target="_blank">
+                    
+                    <span class="glyphicon glyphicon-search"></span>Meklē labāku izskaidrojumu
+                </a>
+            </div>
+            
+            <div class="pad bg-3 center">
+                <h2>Kā pielietot tagus?</h2>
+                <h3>
+                    Tags ir īpaša vārdu vai burtu kombinācija, kas pierakstīta starp < un ><br>
+                    Ar tagiem var stilizēt savu dokumentu, atdalot rindkopas vai pievienojot linkus, vai izveidojot tabulas, lai gan tās netiek vairs tik bieži lietotas.<br>
+            </h3>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <p>Ir tagi, kuri dod vispārīgu informāciju visā HTML failā</p>
+                        <img class="illustration" src="images/br_example.png" alt="br">
+                    </div>
+                    <div class="col-sm-6">
+                        <p>Ir tagi, kuriem ir gan <i>opening tag</i>, gan <i>closing tag</i>.</p>
+                        <img src="images/b_example.png" alt="b" class="illustration">
+                    </div>
+                </div>
+                <h3>
+                    Noderīgi: <a href="https://www.w3schools.com/tags/ref_byfunc.asp" target="_blank">saraksts ar HTML tagiem - sagrupētiem pēc kategorijām</a>
+                </h3>
+            </div>
+            
+            <div class="pad bg-4 center">
+                <h2>Vēl sazin kas interesants</h2>
                 <div class="row">
                     <div class="col-sm-4">
-                        <p>At home</p>
-                        <img src="images/WELCOMEtOdULOC.jpg" class="img-responsive" style="width:100%" alt="welcome">
+                        <p><b>Animētais fons</b></p>
+                        
+                        <div id="myDIV" class="img-responsive"><i>Kā izskatās<br><a href="https://www.w3schools.com/cssref/css_animatable.asp" target="_blank">Vairāk par animācijām</a></i></div>
+                        <p>Koda piemērs:</p>
+                        <img src="images/myDIV.png" class="img-responsive" style="width:95%" alt="myDIV">
                     </div>
                 
                     <div class="col-sm-4">
-                        <p>At home</p>
-                        <img src="images/WELCOMEtOdULOC.jpg" class="img-responsive" style="width:100%" alt="welcome">
+                        <p><b>background-clip</b></p>
+                        <div class="container">
+                            <div class="clip-text">
+                                Hello World
+                            </div>
+                        </div>
+                        No  <a href="https://css-tricks.com/lets-look-50-interesting-css-properties-values/" target="_blank">css-tricks.com</a>
                     </div>
                 
                     <div class="col-sm-4">
-                        <p>At home</p>
-                        <img src="images/WELCOMEtOdULOC.jpg" class="img-responsive" style="width: 100%" alt="welcome">
+                        <p><b>Stepper 3D</b></p>
+                        <img src="images/stepper.png" class="img-responsive" style="width: 100%" alt="stepper">
+                        <p>Vai es pilnīgi bezjēdzīgi pavadīju laiku, lai pāris simts reizītes uzspiestu uz baltās kartītes un lai animācija paskaitītu, cik reizītes es nospiedu? Iespējams, ļoti iespējams.</p>
+                        <p>Vai vēlies tāpat kā es? Spied <a href="https://codepen.io/Volorf/full/QNrrGQ/" target="_blank">te!</a></p>
                     </div>
                 
                 </div>
-
             </div>
+            
           
         </main>
         
-        <footer class="container-fluid bg-4 text-center">
+        <footer class="pad bg-4 center">
             <p>Bootstrap Theme Made By <a href="https://www.w3schools.com" target="_blank">www.w3schools.com</a></p>
          </footer>
         
