@@ -24,7 +24,7 @@ and open the template in the editor.
     }
 
     .pad {
-        padding-top: 50px;
+        padding-top: 80px;
         padding-bottom: 20px;
         padding-left: 75px;
         padding-right: 75px;
@@ -120,4 +120,94 @@ and open the template in the editor.
         text-align: center;
         line-height: 100px;
         flex-shrink: 0;
+    }
+    
+    * {
+        transition: all 0.5s;
+        box-sizing: border-box;
+    }
+
+    .body1 {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: fit-content;
+        perspective: 300px;
+    }
+
+    .body1 .container1 {
+        background: transparent;
+        border-radius: 4px;
+        width: 272px;
+        height: 100px;
+        transform: rotateY(0deg);
+        transform-style: preserve-3d;
+        text-align: center;
+    }
+
+    .body1 .container1 .front {
+        background: #fff;
+        transform: rotateY(0deg);
+        z-index: 2;
+    }
+
+    .body1 .container1 .back {
+        background: #fff;
+        transform: rotateY(180deg);
+    }
+
+    .body1 .container1 .front,
+    .body1 .container1 .back {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        width: 272px;
+        height: 100px;
+        border-radius: 4px;
+    }
+
+    .body1 .container1 .front .decrement,
+    .body1 .container1 .back .decrement,
+    .body1 .container1 .front .increment,
+    .body1 .container1 .back .increment {
+        width: 64px;
+        height: 100px;
+        opacity: 0.2;
+    }
+
+    .body1 .container1 .front .decrement:hover,
+    .body1 .container1 .back .decrement:hover,
+    .body1 .container1 .front .increment:hover,
+    .body1 .container1 .back .increment:hover {
+        cursor: pointer;
+    }
+
+    .body1 .container1 .front .decrement,
+    .body1 .container1 .back .decrement {
+        background: url("http://frolovoleg.ru/images/decrement.svg") no-repeat center;
+    }
+
+    .body1 .container1 .front .increment,
+    .body1 .container1 .back .increment {
+        background: url("http://frolovoleg.ru/images/increment.svg") no-repeat center;
+    }
+
+    .body1 .container1 .front .value_front,
+    .body1 .container1 .back .value_front,
+    .body1 .container1 .front .value_back,
+    .body1 .container1 .back .value_back {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-size: 32px;
+        line-height: 100px;
+        color: black;
+        font-family: "Roboto Mono", "Courier", monospace;
     }
