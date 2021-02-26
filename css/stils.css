@@ -79,6 +79,11 @@ and open the template in the editor.
         border: 3px solid #7fff00;
     }
 
+    .center1 {
+        text-align: center;
+        border: none;
+    }
+    
     .illustration {
         width: 100%;
     }
@@ -210,4 +215,12 @@ and open the template in the editor.
         line-height: 100px;
         color: black;
         font-family: "Roboto Mono", "Courier", monospace;
+    }
+    
+    .podzinja{
+        
+        margin: 10px;
+        height: 50px;
+        width: 50px;
+        
     }
