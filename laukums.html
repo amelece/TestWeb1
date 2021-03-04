@@ -11,24 +11,63 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/stils.css"/>
         <script>
+            var krasinja = ["#ed0e0e", "#21ed0e", "#0e2ced", "#ff73c7", "#fff130", "#ff8c19", "#ff19c6", "#ffffff", "#000000", "#757575", "#60fcef", "#60fcc3", "#964b00", "#b57edc", "#f5f5dc", "#bab86c", "#d2691e", "#ff7f50", "#ffd700", "#ffa07a"];
+            var vardinjs = ["red",     "green",   "blue",    "pink",    "yellow",  "orange",  "purple",  "white",   "black",   "gray",    "aqua",    "mint",    "brown",   "lavender", "beige",  "olive",   "choco",   "coral",   "gold",    "salmon"];
+            var mix = [];
             function zimeLaukumu() {
                 if(document.getElementById("butt").hasChildNodes()){
                     document.getElementById("butt").removeChild(document.getElementById("butt").childNodes[0]);
                 }
                 var n = document.getElementById("n").value;
                 var diviitis = document.createElement("div");
+                miksinjs(n);
                 for(var y=0; y<n; y++){
                     let rinda = document.createElement("div");
                     for(var x=0; x<n; x++){                            
                         let poga= document.createElement("button");
                         poga.setAttribute("class","podzinja");
                         console.log(poga.attributes);
-                        poga.innerHTML=y*n+x+1;
+                        poga.setAttribute("style","vertical-align:middle");
+                        if(mix[y*n+x].charAt(0)=='#'){
+                            poga.style.background = mix[y*n+x];
+                        }else poga.innerHTML = mix[y*n+x];
                         rinda.appendChild(poga);
                     }
                     diviitis.appendChild(rinda);
                 }
                 document.getElementById("butt").appendChild(diviitis);
+            }
+            
+            
+            function miksinjs(k){
+                mix = [];
+                for(let i=0; i<k*k/2; i++){
+                    mix.push(krasinja[i]);
+                    mix.push(vardinjs[i]);
+                }
+                for(let i=0; i<mix.length; i++){
+                    var rand = Math.floor(Math.random()*mix.length);
+                    var tmp = mix[rand];
+                    mix[rand] = mix[i];
+                    mix[i] = tmp;
+                }
+                console.log(mix);
+            }
+            var klik = false;
+            function mainaBilditi(){
+                if (klik)document.getElementById("pog").src = "stepper.jpg";
+                else document.getElementById("pog").src = "div.jpg";
+                klik = !klik;
+            }
+            function maina(){
+                let stils1, stils2;
+                let tt = document.getElementById("pogb");
+                stils1 = tt.style.visibility;
+                if(stils1=="visible"){
+                    stils2 = "visible";
+                }
+                tt.style.visibility = stils2;
+                setTimeout(function(){tt.style.visibility = stils1;}, 2000);
             }
         </script>
     </head>
@@ -36,9 +75,10 @@ and open the template in the editor.
         <h1>Uzzīmē laukumu</h1>
         <form>
             <label for="n">n: </label>
-            <input type="number" id="n" name="n"><br>
+            <input type="number" id="n" name="n" min="2" max="6" step="2" value="4"><br>
         </form>
         <button onclick="zimeLaukumu()">zīmē!</button>
         <div class="btn-group" id="butt"></div>
+        
     </body>
 </html>
