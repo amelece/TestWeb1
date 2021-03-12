@@ -21,6 +21,7 @@ and open the template in the editor.
             var klik = false;
             var meta;
             var open = [];
+            var pp = 0;
             
             function zimeLaukumu() {
                 open = [];
@@ -71,7 +72,7 @@ and open the template in the editor.
             }
             
             function mainaBilditi(g){
-                if (klik){
+                    if (klik){
                     document.getElementById(g).style.background = "";
                     document.getElementById(g).innerHTML = '<img src="images/background.jpg" class="bildite"/>';
                 }
@@ -80,34 +81,37 @@ and open the template in the editor.
                     if(mix[g].charAt(0)=='#'){
                         document.getElementById(g).style.background = mix[g];
                     }else document.getElementById(g).innerHTML = mix[g];
-                }
+                }                
             }
             
             function maina(g){
-                
-                if(!klik){
+                if(!klik&&pp==0){
                     meta = g;
                     mainaBilditi(g);
                     klik = true;
                 }
                 else{
-                    
-                    if(g==meta)mainaBilditi(g);
+                    if(g==meta&&pp==0)mainaBilditi(g);
                     else{
                         klik = false;
                         mainaBilditi(g);
                         let poga1 = mix[meta];
                         let poga2 = mix[g];
-                        if(vardinjs.indexOf(poga1)==krasinja.indexOf(poga2)&&krasinja.indexOf(poga1)==vardinjs.indexOf(poga2)){
+                        if(pp==0&&vardinjs.indexOf(poga1)==krasinja.indexOf(poga2)&&krasinja.indexOf(poga1)==vardinjs.indexOf(poga2)){
                             open.push(meta);
                             open.push(g);
                             meta = -1;
                             console.log(open);
                         }else{
                             klik = true;
-                            mainaBilditi(g);
-                            mainaBilditi(meta);
-                            klik = false;
+                            pp = 1;
+                            setTimeout(function(){
+                                
+                                mainaBilditi(g);
+                                mainaBilditi(meta);
+                                klik = false;
+                            }, 1000);
+                            pp = 0;
                         }
                     }
                 }
@@ -118,12 +122,13 @@ and open the template in the editor.
     </head>
     
     <body class="bg-1 center1">
-        <h1>Uzzīmē laukumu</h1>
+        <h1>Uzzīmē n*n laukumu un atrodi atbilstošos pārīšus</h1>
         <form>
             <label for="n">n: </label>
             <input type="number" id="n" name="n" min="2" max="6" step="2" value="4"><br>
         </form>
         <button onclick="zimeLaukumu()">zīmē!</button>
+        
         <div class="btn-group" id="butt"></div>
     </body>
 </html>
