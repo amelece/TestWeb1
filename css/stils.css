@@ -215,18 +215,19 @@ and open the template in the editor.
     }
     
     .podzinja{
-        
         margin: 10px;
         height: 70px;
         width: 70px;
+        vertical-align: middle;
+        border-radius: 12px;
+        outline: none;
     }
     
     .bildite{
         height: 70px;
         width: 70px;
-        margin: 0;
-        border: 0;
-        padding: 0;
-        display: block;
-        vertical-align:top;
+        position: relative;
+        top: -3px;
+        left: -8px;
+        border-radius: 12px;
     }
