@@ -112,6 +112,7 @@ function maina(g){
                     }else{
                         setTimeout(function(){alert("Tavs laiks: " + laiks + " s");}, 500);
                     }
+                    fetchy();
                 }
                 meta = -1;
             }else{
@@ -126,4 +127,17 @@ function maina(g){
             }
         }
     }
+}
+
+function fetchy(){
+    fetch('https://dog.ceo/api/breeds/image/random', {
+          method: 'GET'})
+        .then(res => res.json())
+        .then(data => {
+            let imag = data.message;
+            let bb = document.createElement("IMG");
+            bb.src = imag;
+            document.getElementById("dog").appendChild(bb);
+            
+        });
 }
